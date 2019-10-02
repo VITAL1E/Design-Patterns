@@ -12,8 +12,8 @@ public class Main {
         double price = 0;
 
         while (true) {
-            System.out.println("===== WELCOME TO THE CANDY SHOP =====");
-            System.out.println("=====            MENU           =====");
+            System.out.println("=====   WELCOME TO THE CANDY SHOP   =====");
+            System.out.println("=====              MENU             =====");
             System.out.println("1. Cake");
             System.out.println("2. Coffee");
             System.out.println("3. Chocolate bar");
@@ -22,17 +22,15 @@ public class Main {
             System.out.println("6. Finish order");
 
             Scanner scanner = new Scanner(System.in);
-
             int option = scanner.nextInt();
 
             if (option == 1) {
-
                 String answer = null;
 
                 while (true) {
                     System.out.println("=====       Cake Types       =====");
-                    System.out.println("1. Cheesecake........ 4$");
-                    System.out.println("2. Chocolate cake.... 2$");
+                    System.out.println("1. Cheesecake.................. 4$");
+                    System.out.println("2. Chocolate cake.............. 2$");
 
                     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
@@ -43,7 +41,6 @@ public class Main {
                     }
 
                     if (answer.equals("1")) {
-
                         System.out.println("You chose cheesecake");
                         Cake cheesecake = PastryFactory.getInstance("cheesecake", 4);
 
@@ -53,7 +50,6 @@ public class Main {
                         break;
 
                     } else if (answer.equals("2")) {
-
                         System.out.println("You chose chocolate cake");
                         Cake chocolateCake = PastryFactory.getInstance("chocolate cake", 2);
 
@@ -72,19 +68,19 @@ public class Main {
                 Scanner scanCoffee = new Scanner(System.in);
 
                 for (int i = 0; i < 1; i++) {
-
+                    
                     System.out.println("=====       Coffee Types       =====");
-                    System.out.println("1. Simple Coffee............. 1$");
-                    System.out.println("2. Coffee with milk........ 1.5$");
-                    System.out.println("3. Coffee with sprinkles... 1.2$");
+                    System.out.println("1. Simple Coffee................. 1$");
+                    System.out.println("2. Coffee with milk............ 1.5$");
+                    System.out.println("3. Coffee with sprinkles....... 1.2$");
 
                     int coffeeOption = scanCoffee.nextInt();
                     Coffee coffee = new SimpleCoffee();
 
                     if (coffeeOption == 1) {
-                        printInfo(coffee);
-
                         price += coffee.getCost();
+
+                        printInfo(coffee);
                         System.out.println("You chose simple coffee");
                         Thread.sleep(1500);
 
@@ -110,6 +106,7 @@ public class Main {
                         System.out.println("Please choose an option");
                     }
                 }
+                
             } else if (option == 3) {
                 Scanner chocolate = new Scanner(System.in);
 
