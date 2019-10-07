@@ -155,18 +155,21 @@ public class Main {
                         Doughnut vanillaDoughnut = new Doughnut.Builder("vanilla", 2.5).setCream("ice-cream").build();
                         System.out.println("You chose vanilla doughnut with ice-cream. Ingredients: " + vanillaDoughnut.getFlavour() + ", " + vanillaDoughnut.getCream());
                         price += vanillaDoughnut.getCost();
+                        Thread.sleep(1500);
                         break;
 
                     } else if (doughnutOption == 2) {
                         Doughnut chocolateDoughnut = new Doughnut.Builder("chocolate", 1.9).build();
                         System.out.println("You chose chocolate doughnut. Ingredients: " + chocolateDoughnut.getFlavour());
                         price += chocolateDoughnut.getCost();
+                        Thread.sleep(1500);
                         break;
 
                     } else if (doughnutOption == 3) {
                         Doughnut cinnamon = new Doughnut.Builder("cinnamon", 1.2).build();
                         System.out.println("You chose cinammon. Ingredients: " + cinnamon.getFlavour());
                         price += cinnamon.getCost();
+                        Thread.sleep(1500);
                         break;
 
                     } else {
@@ -175,7 +178,7 @@ public class Main {
                 }
 
             } else if (option == 5) {
-                Soda soda = NullObjectPattern.getSoda(false);
+                Soda soda = BuySoda.getSoda(false);
                 soda.getCost();
                 System.out.println("We do not sell soda anymore :(");
                 Thread.sleep(1500);
